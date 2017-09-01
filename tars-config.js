@@ -28,7 +28,7 @@ module.exports = {
     svg: {
         active: true,
         // symbols, sprite
-        workflow: 'sprite',
+        workflow: 'symbols',
         symbolsConfig: {
             // separate-file, separate-file-with-link, inject
             loadingType: 'inject',
@@ -53,13 +53,13 @@ module.exports = {
          * Use linting of js-files
          * @type {Boolean}
          */
-        lint: true,
+        lint: false,
 
         /**
          * Use babel for ES6(ES7-ESNext) syntax support
          * @type {Boolean}
          */
-        useBabel: true,
+        useBabel: false,
 
         /**
          * Remove console.log and debugger from js code in release mode
@@ -98,7 +98,7 @@ module.exports = {
          * Path-strings to js-files, which have to be included before modules' js-files
          * @type {Array}
          */
-        jsPathsToConcatAfterModulesJs: [],
+        jsPathsToConcatAfterModulesJs: ['./markup/static/js/functions/*.js'],
 
         /**
          * Lint additional js after modules
@@ -135,7 +135,7 @@ module.exports = {
          * Do you need to use notify?
          * @type {Boolean}
          */
-        useNotify: true,
+        useNotify: false,
 
         /**
          * Title for notifier
@@ -191,20 +191,20 @@ module.exports = {
      * Could be like '../../../build' or absolute path
      * @type {String}
      */
-    buildPath: './builds/',
+    buildPath: './build/',
 
     /**
      * Use build versioning
      * Build version is a date ot building
      * @type {Boolean}
      */
-    useBuildVersioning: true,
+    useBuildVersioning: false,
 
     /**
      * Use archiver for your build
      * @type {Boolean}
      */
-    useArchiver: true,
+    useArchiver: false,
 
     /**
      * Set ulimit. Topical for Linux-family OS and OSX.
@@ -234,7 +234,7 @@ module.exports = {
      * .sass extension is supported if cssPreprocessor is 'scss'
      * @type {String}
      */
-    cssPreprocessor: 'scss',
+    cssPreprocessor: 'stylus',
 
     /**
      * What kind of size of images are you going to use.
